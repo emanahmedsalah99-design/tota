@@ -63,7 +63,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh """
-                    docker run -d -p 5000:5000 \
+                    docker run -d -p 5001:5000 \
                     --name ${APP_NAME}-${GIT_BRANCH}-${BUILD_NUMBER} \
                     ${DOCKER_IMAGE}:${BUILD_NUMBER}
 
